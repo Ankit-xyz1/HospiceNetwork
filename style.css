@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.space{
+    height: 100px; 
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    z-index: 1;
+    height: 200vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+
+
+
+.content{
+    height: 50vh;
+    width: 80%;
+    /* border: 2px solid red; */
+    font-family: "Platypi", serif;
+}
+
+.content p{
+    font-family: "Platypi", serif;
+}
+.content h1{
+    font-family: "Platypi", serif;
+}
+.main-genesis-pass{
+    overflow: hidden;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+.Genesis-pass{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Platypi", serif;
+    text-align: center;
+    color: white;
+    height: 30vh;
+    width: 80%;
+    background-color: black;
+}
+.mint-btn{
+    padding: 10px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.funding{
+    height:40vh;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Platypi", serif;
+
+
+}
+
+.mainFunding{
+    flex-direction: column;
+    display: flex;
+    height: 30vh;
+    width: 80%;
+    /* border: 2px solid red */
+}
+.mainFunding h2{
+    text-align: center;
+}
+.mainFunding p{
+    text-align: center;
+    color: #d4af37;
+}
+.mainFunding img{
+   height: 40px;
+}
+.Investors{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.known{
+    color: rgb(255, 255, 255);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Platypi", serif;
+    /* position: relative; */
+    /* top: -500px; */
+    background-color: rgb(0, 0, 0);
+    
+    /* background-color: black; */
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.known a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+@media screen and (min-width: 480px) {
+    .container{
+        height: 80vh;
+    }
+    .mainFunding{
+       width: 50%;
+    }
+      .mainFunding img{
+        height: 60px;
+     }
+}
+
+
+
+
+/* sm */
+.btn {
+    display: block;
+    padding: 0.7em 1em;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #d4af37;
+    letter-spacing: 0.1em;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.cube {
+    position: relative;
+    transition: all 0.5s;
+}
+
+.cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: #d4af37;
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+    transition: all 0.4s;
+}
+
+.cube .bg-top .bg-inner {
+    bottom: 0;
+}
+
+.cube .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: #d4af37;
+    transition: all 0.4s;
+}
+
+.cube .bg-right {
+    position: absolute;
+    background: #d4af37;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+    transition: all 0.4s;
+}
+
+.cube .bg-right .bg-inner {
+    left: 0;
+}
+
+.cube .bg-inner {
+    background: #28282d;
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+}
+
+.cube .text {
+    position: relative;
+    transition: all 0.4s;
+}
+
+.cube:hover .bg-inner {
+    background: #d4af37;
+    transition: all 0.4s;
+}
+
+.cube:hover .text {
+    color: #28282d;
+    transition: all 0.4s;
+}
+
+.cube:hover .bg-right,
+.cube:hover .bg,
+.cube:hover .bg-top {
+    background: #28282d;
+}
+
+.cube:active {
+    z-index: 9999;
+    animation: bounce 0.1s linear;
+}
+
+@keyframes bounce {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+/* Genesis pass minting btn */
+button {
+    /* width: 200px; */
+    border: 2px solid #f8be00;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: #d4af37;
+    background: #484547;
+    /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+  }
+  
+  button a  {
+    text-decoration: none;
+    color: #d4af37;
+  }
+  
+  button svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+  
+  button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+    color: black;
+  }
+  
+  button:hover a {
+    transform: translateX(7px);
+    color: black;
+  }
+  button:hover  {
+    background: #d4af37;
+  }
+
+
